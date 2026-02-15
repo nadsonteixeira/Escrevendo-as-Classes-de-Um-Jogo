@@ -1,0 +1,43 @@
+class Heroi {
+  constructor(nome, idade, tipo) {
+    this.nome = nome;
+    this.idade = idade;
+    this.tipo = tipo;
+  }
+
+  atacar() {
+    let ataque;
+
+    switch (this.tipo) {
+      case "banshee":
+        ataque = "alteração de almas";
+        break;
+      case "lobisomem":
+        ataque = "garras sangrentas";
+        break;
+      case "bruxa":
+        ataque = "bola de energia amaldiçoada";
+        break;
+      case "bersek":
+        ataque = "avanço brutal";
+        break;
+      default:
+        ataque = "ataque desconhecido";
+    }
+
+    console.log(`o ${this.tipo} atacou usando ${ataque}`);
+  }
+}
+
+// nome-idade-tipo
+const heroi = new Heroi("Nyx", 120, "banshee");
+heroi.atacar();
+
+const heroi2 = new Heroi("Lupus", 35, "lobisomem");
+heroi2.atacar();
+
+const heroi3 = new Heroi("Morgana", 90, "bruxa");
+heroi3.atacar();
+
+const heroi4 = new Heroi("Ragnar", 40, "bersek");
+heroi4.atacar();
